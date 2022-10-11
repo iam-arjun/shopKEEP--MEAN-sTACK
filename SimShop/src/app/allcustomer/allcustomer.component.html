@@ -1,0 +1,37 @@
+<section class="all_customer mt-3">
+    <div class="container" *ngFor="let item of customerArr ; index as i">
+        <div class="card">
+            <div class="card-body customer_div">
+                <div class="customer_logo part">
+
+                    <h5>
+                        <a href="https://wa.me/9827935712" target="_blank">
+                            <span class="material-icons">call</span>
+                        </a>
+                    </h5>
+                </div>
+
+                <div class="customerInfo part">
+                    <h3 class="text-capitalize">{{item.Name}}</h3>
+                    <h5 class="text-capitalize">
+                        {{item.Phone}}
+                    </h5>
+
+                </div>
+
+                <div class="option part">
+                    <button mat-raised-button (click)="openDialog()" (click)="showTransModal(item._id)">Options</button>
+                    <button mat-button class="btn btn-danger mt-2" (click)="dlt(item._id)">Delete</button>
+                    
+                </div>
+
+ 
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</section>

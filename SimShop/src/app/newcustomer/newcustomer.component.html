@@ -1,0 +1,35 @@
+<section class="new_customer_form mt-3">
+    <h1 class="text-center text-warning">{{EditMode?'Update Customer':'Add New Customer'}}</h1>
+    <form action="/customerInfo" method="post" [formGroup]="customer_form" (ngSubmit)="onsubmit()">
+        <div class="form_group">
+            <mat-form-field appearance="fill">
+                <mat-label>Customer Name</mat-label>
+                <input  matInput placeholder="Enter your full name"  formControlName="Name" >
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill">
+                <mat-label>Customer Email</mat-label>
+                <input type="email" formControlName="Email" placeholder="Enter your email" matInput >
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill">
+                <mat-label>Customer Phone</mat-label>
+                <input type="text"formControlName="Phone" placeholder="Enter your phone number"   matInput>
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill">
+                <mat-label>Customer Address</mat-label>
+                <input type="text" formControlName="Address" placeholder="Enter your address" matInput>
+            </mat-form-field>
+
+            
+
+        </div>
+        <div class="form_btn">
+            <button id="submit_btn"  color="warn" type="submit" mat-raised-button  >{{EditMode?'Update':'Save'}}</button>
+
+        </div>
+       
+       
+    </form>
+</section>

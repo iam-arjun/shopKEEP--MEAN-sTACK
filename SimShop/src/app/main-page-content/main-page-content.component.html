@@ -1,0 +1,40 @@
+<div class="all_transactions">
+  <div class="trans_header">
+
+
+
+    <h3 class="text-center text-primary text-bold ">Total transaction till now...</h3>
+    <a type="button" mat-raised-button routerLink="newcustomer" (click)="additional_cutomerForm()">Add New</a>
+  </div>
+
+
+
+  <ul class="transaction_list">
+    <li class="item">
+      <div class="card  main_card " *ngFor="let item of  mainPageTransArr">
+        <div class="card-body show_trans">
+
+          <div class="trans_icon div_items">
+            <mat-icon class="item_icon"> call_missed</mat-icon>
+          </div>
+          <div class="customer_name  div_items">
+            <h4 class="text-capitalize">{{item.Name}}</h4>
+            <p class="trans_type text-capitalize">
+              {{item.Type}}
+            </p>
+          </div>
+          <div class="amt_date div_items">
+            <h4>{{item.Amount}}</h4>
+            <p class="text-capitalize">
+              {{item.Date}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+
+
+</div>

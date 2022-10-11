@@ -1,0 +1,71 @@
+<div class="container main_div">
+    <div class="navbar_header">
+        <!-- 9821396008 pabi dd  -->
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">SimShop</span>
+        </nav>
+        <div class="example-sidenav-content">
+            <button type="button" mat-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+    </div>
+
+
+    <mat-drawer-container class="example-container" autosize>
+
+
+        <div class="all_content">
+            <app-newcustomer *ngIf="new_customer_display"></app-newcustomer>
+            <app-new-transaction *ngIf="new_transaction_display&&transaction_status">
+            </app-new-transaction>
+            <app-search-customer *ngIf="searchStatus"></app-search-customer>    
+
+            <app-allcustomer *ngIf="allcustomer_display"></app-allcustomer>
+
+            <app-main-page-content *ngIf="main_page_content_display ">
+
+            </app-main-page-content>
+
+        </div>
+
+
+
+
+
+
+        <!-- As a heading -->
+
+
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+            <!--     
+        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+          Toggle extra text
+        </button> -->
+            <!-- 
+        <h1>This is a side nab</h1> -->
+            <div class="menu-items">
+                <ul>
+                    <li> <button mat-raised-button color="warn" routerLink="/" (click)="drawer.toggle()"
+                            (click)="homepage_status()">Dashboard</button></li>
+                    <li><button mat-raised-button color="warn" routerLink="newcustomer" (click)="drawer.toggle()"
+                            (click)="new_customer_status()">New
+                            Customer</button></li>
+                    <li><button mat-raised-button color="warn" routerLink="newtransaction"
+                            (click)="newtransaction_status()" (click)="drawer.toggle()">New
+                            Transaction</button></li>
+                    <li><a type="button" routerLink="allcustomer" mat-raised-button color="warn"
+                            (click)="drawer.toggle()" (click)="allcustomer_status()">All Customer</a></li>
+                </ul>
+            </div>
+        </mat-drawer>
+
+
+
+
+
+
+    </mat-drawer-container>
+
+</div>

@@ -1,0 +1,30 @@
+.all_customer {
+    min-width: 450px;
+}
+
+
+.customer_div{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+
+}
+.part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dialog_act{
+    color:darkcyan;
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+.content{
+    display: flex;
+
+}

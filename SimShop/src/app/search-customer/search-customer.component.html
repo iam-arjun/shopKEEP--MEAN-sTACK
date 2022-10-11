@@ -1,0 +1,13 @@
+<section class="search_customer mt-3">
+    <input type="text" id="search"  placeholder="search here" class="form-control" [(ngModel)]="namesearch" >
+  
+    
+    <div  class="card customer_search_detail mt-2" *ngFor="let item of Search_arr|customPipe:namesearch">
+        <div class="card-body" >
+            <div class="customer_name">
+              <h4 class="text-capitalize" #name  (click)="again_transPage(name)">{{item.Name}}</h4>
+             
+            </div>                          
+        </div>
+    </div>
+</section>

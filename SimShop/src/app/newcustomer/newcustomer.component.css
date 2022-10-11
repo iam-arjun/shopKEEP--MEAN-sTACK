@@ -1,0 +1,18 @@
+.new_customer_form {
+    min-width: 500px;
+    display: grid;
+    place-items:  center;
+}
+mat-label{
+    color:darkcyan;
+    font-weight: bold;
+
+}
+.form_group{
+    display: flex;
+    flex-direction: column ;
+}
+.form_btn{
+    display: flex;
+    justify-content: center;
+}

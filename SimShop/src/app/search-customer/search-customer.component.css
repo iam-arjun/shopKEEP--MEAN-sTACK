@@ -1,0 +1,28 @@
+.search_customer{
+    min-width: 500px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+.customer_search_detail{
+    width:70%;
+  height: fit-content;
+
+    margin:auto;
+    cursor: pointer;
+
+  
+}
+
+.customer_name{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.customer_name h4{
+    color:darkolivegreen;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
